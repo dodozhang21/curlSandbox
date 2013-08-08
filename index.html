@@ -3,20 +3,22 @@
   <head>
     <style>body { overflow: hidden; } #container { position: relative }</style>
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/lib/jquery.flexslider.js"></script>
     <script type="text/javascript">
       curl = {
-		//pluginPath: 'js/lib/curl/plugin',
+		pluginPath: 'js/lib/curl/plugin',
         paths: {
-          'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min'
-          ,'flexslider2': 'js!js/lib/jquery.flexslider'
-          ,'mustache': 'js!js/lib/mustache'
-        },
-        preloads: ['jquery'],
+          //,'flexslider2': 'js!js/lib/jquery.flexslider'
+          'mustache': 'js/lib/mustache'
+        }
+        //,preloads: ['jquery']
         // this will load your bootstrap file asap:
-        main: 'js!js/bootstrap'
+        ,main: 'js/bootstrap.js'
       };
     </script>
-    <script src="//cdn.jsdelivr.net/curl.js/0.7.5/curl/curl.js"></script>
+	<script src="js/lib/curl.js"></script>
+    <!--<script src="//cdn.jsdelivr.net/curl.js/0.7.5/jquery/curl.js"></script>-->
     <!--<script src="js/bootstrap.js"></script>-->
 	<!--
 	<script src="js/lib/curl/curl.0.7.5.js"></script>

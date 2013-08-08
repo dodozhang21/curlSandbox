@@ -17,9 +17,10 @@ define('flexslider2',
 });
 */
 
+
 define('planner',
 	//['js!js/lib/jquery.flexslider.js'],
-	['flexslider2'],
+	//['flexslider2'],
 function () {
 	var planner = {
 		doStuff:function(){
@@ -35,8 +36,8 @@ function () {
 });
 
 define('birthdayPlanner',
-	['planner', 'mustache'], 
-function(planner) {
+	['planner', 'mustache', 'text!tmpl/test.html'], 
+function(planner, Mustache, testTmpl) {
 		
 	var birthdayPlanner = {
 		doMoreStuff: function() {
@@ -49,7 +50,8 @@ function(planner) {
 			  }
 			};
 
-			var output = Mustache.render("{{title}} spends {{calc}}", view);
+			var output = Mustache.render(testTmpl, view);
+			console.log(output);
 		}
 	}
 	
